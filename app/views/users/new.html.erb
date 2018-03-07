@@ -1,0 +1,20 @@
+<h1>Sign Up for a New Account</h1>
+<%=  form_for @user do |f| %>
+  <% flash[:errors] && flash[:errors].each do |err| %>
+<p><%= err  %> </p>
+<% end %>
+<div>
+  <%= f.label :username  %>
+<%= f.text_field :username %>
+</div>
+
+<div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+
+<div>
+  <%= f.submit "Register" %>
+</div>
+<% end %>
+<h3>/Users/eileenulry/Dropbox/tts_full/March/march7/auth_eapp/app/views/users/new.html.erb</h3>
